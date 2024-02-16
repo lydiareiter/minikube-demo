@@ -39,4 +39,4 @@ jobs:
           password: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: Push latest to packages
-        run: docker push ghcr.io/lydiareiter/backend:latest
+        run: docker push ghcr.io/lydiareiter/minicube-demo-backend:latest
