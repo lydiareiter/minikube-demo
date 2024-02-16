@@ -28,6 +28,9 @@ jobs:
       - name: copy and build image
         run: cp src/main/docker/Dockerfile target && docker build --tag ghcr.io/lydiareiter/backend ./target
 
+      - name: Check if image was created
+        run: docker image ls | grep ghcr.io/lydiareiter/backend
+
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
